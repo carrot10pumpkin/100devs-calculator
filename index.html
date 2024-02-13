@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+ <script src="https://cdn.tailwindcss.com"></script> 
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet"> -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> -->
+  
+  <title>100Devs-Calculator</title>
+
+
+  
+</head>
+<body>
+
+    <div class="bg-gray-200 w-screen h-screen flex justify-center items-center">   
+     
+      
+      <div class="card">
+
+
+
+      <section class="w-auto m-3 h-28 text-right space-y-2 py-2 px-2 bg-white">
+        <div id="equation" class="text-gray-700">0</div>
+        <div id="result" class="text-black font-bold text-3xl">0</div>
+      </section>
+
+   <ul id="clickzone" class="m-2 flex flex-wrap justify-between " >
+
+        <li id ="zero" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" >0</button>
+  
+        </li>
+
+        <li id ="one" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" >1</button>
+  
+        </li>
+  
+        <li id ="two" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" >2</button>
+  
+        </li>
+  
+       
+        <li id ="three" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" >3</button>
+  
+        </li>
+  
+        <li id ="four" >
+  
+          <button  class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">4</button>
+  
+        </li>
+  
+        <li id ="five" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">5</button>
+  
+        </li>
+  
+        <li id ="six" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">6</button>
+  
+        </li>
+  
+        <li id ="seven" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">7</button>
+  
+        </li>
+        
+        <li id ="eight" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">8</button>
+  
+        </li>
+        <li id ="nine" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">9</button>
+  
+        </li>
+        <li id ="plus" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">+</button>
+  
+        </li>
+        <li id ="minus" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">-</button>
+  
+        </li>
+        <li id ="multiply" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">*</button>
+  
+        </li>
+  
+        <li id ="equals" >
+  
+          <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">=</button>
+  
+          <li id ="divide" >
+  
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">/</button>
+    
+          </li>
+          <li id ="clear" >
+  
+            <button class="bg-yellow-100 shadow-md rounded-2xl w-12 h-12 text-yellow-600 font-medium flex justify-center items-center">Clear</button>
+    
+          </li>
+  
+        </ul>  
+   
+      
+        <!-- <div class="m-2 flex justify-between ">
+          <div class="bg-yellow-100 shadow-md rounded-2xl w-12 h-12 text-yellow-600 font-medium flex justify-center items-center">C</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">(</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">)</div>
+          <div class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">/</div>
+        </div>
+
+        <div class="m-2 flex justify-between">
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">7</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">8</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">9</div>
+          <div class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">x</div>
+        </div>
+
+        <div class="m-2 flex justify-between">
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">4</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">5</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">6</div>
+          <div class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">-</div>
+        </div>
+
+        <div class="m-2 flex justify-between">
+          <div  class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">1</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">2</div>
+          <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">3</div>
+          <div class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">+</div>
+        </div>
+
+        <div class="m-2 flex justify-between">
+          <div class="bg-gray-200 shadow-md rounded-2xl w-full h-12 text-black font-medium flex justify-center items-center">0</div>
+          <div class="flex w-full ml-3 justify-between">
+            <div class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">.</div>
+            <div class="bg-green-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">=</div>
+          </div> -->
+        <!-- </ul> -->
+
+        <!-- <div class="flex justify-center mt-5">
+          <div class="w-20 h-1 bg-gray-100 rounded-l-xl rounded-r-xl"></div>
+        </div> -->
+      </div>
+
+
+        </div>
+
+      
+    </div> 
+
+ <!-- <ul id="clickzone" >
+      <li id ="zero" >
+
+        <button>0</button>
+
+      </li>
+      <li id ="one" >
+
+        <button>1</button>
+
+      </li>
+
+      <li id ="two" >
+
+        <button>2</button>
+
+      </li>
+
+     
+      <li id ="three" >
+
+        <button>3</button>
+
+      </li>
+
+      <li id ="four" >
+
+        <button>4</button>
+
+      </li>
+
+      <li id ="five" >
+
+        <button>5</button>
+
+      </li>
+
+      <li id ="six" >
+
+        <button>6</button>
+
+      </li>
+
+      <li id ="seven" >
+
+        <button>7</button>
+
+      </li>
+      
+      <li id ="eight" >
+
+        <button>8</button>
+
+      </li>
+      <li id ="nine" >
+
+        <button>9</button>
+
+      </li>
+      <li id ="plus" >
+
+        <button>+</button>
+
+      </li>
+      <li id ="minus" >
+
+        <button>-</button>
+
+      </li>
+      <li id ="multiply" >
+
+        <button>*</button>
+
+      </li>
+
+      <li id ="equals" >
+
+        <button>=</button>
+
+        <li id ="divide" >
+
+          <button>/</button>
+  
+        </li>
+        <li id ="clear" >
+
+          <button>Clear</button>
+  
+        </li>
+
+      </ul>   -->
+ 
+
+<!--                 
+          <section class="w-auto m-3 h-28 text-right space-y-2 py-2 px-2 bg-white">
+            <div id="Equation" class="text-gray-700">0</div>
+            <div id="Result" class="text-black font-bold text-3xl">0</div>
+          </section>
+           
+          
+          
+          <ul id="clickzone" >
+            <li id ="one" >
+
+              <button >1</button>
+
+            </li>
+
+
+            </ul>
+             -->
+         
+          <!-- <div  class="w-auto m-1 h-auto mb-2 clickzone ">
+            <div class="m-2 flex ">
+        <button id="clear" class="bg-yellow-100 shadow-md rounded-2xl w-12 h-12 text-yellow-600 font-medium flex justify-center items-center">C</button>
+
+              <button id="divide" class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">/ </button>
+            </div>
+
+
+            <div class="m-2 flex justify-between ">
+              <button id="seven" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">7</button>
+
+                <button id="eight" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">8</button>
+
+                  <button id="nine" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">9</button>
+                 <button id="multiply" class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">x</button>
+            </div>
+
+
+            <div class="m-2 flex justify-between ">
+              <button id="four" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">4</button>
+              
+                <button  id="five" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">5</button>
+              
+                  <button  id="six" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">6</button>
+              
+                    <button id="minus" class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">-</button>
+            </div>
+
+
+            <div class="m-2 flex justify-between clickzone  ">
+              <span id="one">   <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">1</button></span>
+
+                <button id= "two" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">2</button>
+
+                  <button  id="three" class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center">3</button>
+
+                    <button  id="plus" class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">+</button>
+            </div>
+
+
+            <div class="m-2 flex justify-between clickzone">
+              <button class="bg-gray-200 shadow-md rounded-2xl w-full h-12 text-black font-medium flex justify-center items-center">0</button>
+              <div class="flex w-full ml-3 justify-between">
+               
+                <button  class="bg-green-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center">=</button>
+              </div>
+            </div>
+
+       
+                     <div class="flex justify-center mt-5">
+                      <div class="w-20 h-1 bg-gray-100 rounded-l-xl rounded-r-xl"></div>
+                       </div> 
+          </div> -->
+
+    </body>
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>
